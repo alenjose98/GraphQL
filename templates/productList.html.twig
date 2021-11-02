@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        {# <form action="graphql">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>Price:</label></td>
+                <td><input type="text" name="price"/></td>
+            </tr>
+            <tr>
+                <td><label>Slug:</label></td>
+                <td><input type="text" name="slug"/></td>
+            </tr>
+            <tr>
+                <td><label>Description:</label></td>
+                <td><input type="text" name="description"/></td>
+            </tr>
+            <tr><td><input type="submit" value="Submit"></td></tr>
+        </table>
+        </form> #}
+        {% endblock %}
+        {% for outputs in output %}
+        {{ dump(outputs) }}
+        {% endfor %}
+    </body>
+</html>
